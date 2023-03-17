@@ -54,14 +54,15 @@ function promise3(arr) {
 
 promise1(arr)
   .then((res) => {
-    console.log(res);
+    // console.log(res);
     return promise2(res);
   })
   .then((res) => {
-    console.log(res);
+    // console.log(res);
+	  output.innerHTML = res;
     return promise3(res);
   })
   .then((res) => {
-    console.log(`final `, res);
+    // console.log(`final `, res);
     output.innerHTML = res;
   });
